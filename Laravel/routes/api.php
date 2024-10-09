@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/exemplo', function (Request $request) {
-    return response()->json(['message' => 'Hello, world!']);
+Route::get('/dados', function () {
+    return response()->json(['message' => 'Dados recebidos com sucesso!']);
+});
+
+Route::get('/dengue', function () {
+    return response()->json([
+        ['id' => 1, 'title' => 'Foco de Dengue 1'],
+        ['id' => 2, 'title' => 'Foco de Dengue 2'],
+    ]);
 });
